@@ -34,5 +34,4 @@ with open(os.path.join(sys.path[0],"starmap"),'r') as txtlines:
     
     for line in lines:
         line = line.strip()
-        print(line)
-        y=input()
+        
