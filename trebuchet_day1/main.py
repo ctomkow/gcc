@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import os
+import sys
 
 # # function
 # # todo: open file
@@ -25,3 +27,7 @@
 # # todo: combine dicts from parse left and right and do math
 # input: dict(left), dict(right)
 # print final int total
+
+with open(os.path.join(sys.path[0],"starmap"),'r') as txtlines:
+    lines = txtlines.readlines()
+
