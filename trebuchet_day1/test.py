@@ -1,5 +1,5 @@
 
-import main
+import parser as main
 
 test_data1 = "six1mpffbnbnnlx7three\n"
 test_data2 = "sixmpffbnbnnlxthree\n"
