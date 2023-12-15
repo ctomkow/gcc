@@ -1,29 +1,34 @@
 
-import parser as main
+import parser
 
-test_data1 = "six1mpffbnbnnlx7three\n"
-test_data2 = "sixmpffbnbnnlxthree\n"
-test_data3 = "six22222mpffbnbnnlxthree\n"
-test_data4 = "sixmpffbnbn9nlxthree\n"
+import unittest
 
 
-def test_parse_from_left_data1():
-    assert main.parse_from_left(test_data1) == '1'
+class TestParsing(unittest.TestCase):
+
+    test_data1 = "six1mpffbnbnnlx7three\n"
+    test_data2 = "sixmpffbnbnnlxthree\n"
+    test_data3 = "six22222mpffbnbnnlxthree\n"
+    test_data4 = "sixmpffbnbn9nlxthree\n"
+    test_data5 = 42
+
+    def test_parse_from_left_data1(self):
+        assert parser.parse_from_left(self.test_data1) == '1'
+
+    def test_parse_from_left_data2(self):
+        assert parser.parse_from_left(self.test_data2) == ''
+
+    def test_parse_from_left_data3(self):
+        assert parser.parse_from_left(self.test_data3) == '2'
+
+    def test_parse_from_left_data4(self):
+        assert parser.parse_from_left(self.test_data4) == '9'
+
+    def test_parse_from_left_data5(self):
+        self.assertRaises(TypeError, parser.parse_from_left, self.test_data5)
 
 
-def test_parse_from_left_data2():
-    assert main.parse_from_left(test_data2) == ''
-
-
-def test_parse_from_left_data3():
-    assert main.parse_from_left(test_data3) == '2'
-
-
-def test_parse_from_left_data4():
-    assert main.parse_from_left(test_data4) == '9'
-
-
-test_parse_from_left_data1()
-test_parse_from_left_data2()
-test_parse_from_left_data3()
-test_parse_from_left_data4()
+TestParsing().test_parse_from_left_data1()
+TestParsing().test_parse_from_left_data2()
+TestParsing().test_parse_from_left_data3()
+TestParsing().test_parse_from_left_data4()

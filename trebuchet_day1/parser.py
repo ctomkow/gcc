@@ -1,8 +1,5 @@
 
 
-sample_data = 'kpzfgp1xdo7nesixfour4ninefourfour'
-
-
 def parse_from_left(line: str) -> str:
 
     if not isinstance(line, str):
@@ -12,5 +9,3 @@ def parse_from_left(line: str) -> str:
             return s
     return ''
 
-
-print(parse_from_left(sample_data))
