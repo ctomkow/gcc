@@ -27,7 +27,6 @@ import re
 # # todo: combine dicts from parse left and right and do math
 # input: dict(left), dict(right)
 # print final int total
-#test
 
 
 with open(os.path.join(sys.path[0],"starmap"),'r') as txtlines:
