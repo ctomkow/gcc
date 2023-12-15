@@ -3,7 +3,7 @@
 sample_data = 'kpzfgp1xdo7nesixfour4ninefourfour'
 
 
-def find_from_left(line: str) -> str:
+def parse_from_left(line: str) -> str:
 
     if not isinstance(line, str):
         raise TypeError('line must be a string')
@@ -12,4 +12,4 @@ def find_from_left(line: str) -> str:
             return s
 
 
-print(find_from_left(sample_data))
+print(parse_from_left(sample_data))
