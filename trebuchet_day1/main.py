@@ -24,4 +24,12 @@
 # # function
 # # todo: combine dicts from parse left and right and do math
 # input: dict(left), dict(right)
-# print final int total
+# print final int tota
+
+with open(os.path.join(sys.path[0],"starmap"),'r') as txtlines:
+    lines = txtlines.readlines()
+    
+    for line in lines:
+        line = line.strip()
+        find_from_left(line: str)
+        find_from_right(line: str)
